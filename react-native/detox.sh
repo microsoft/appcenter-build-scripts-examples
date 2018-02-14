@@ -1,4 +1,6 @@
-# Sample App Center post-clone script for running Detox.
+# appcenter-post-clone.sh
+#
+# Run Detox.
 #
 # Notes:
 # 1) This script was originally designed to work with the wix Detox 
