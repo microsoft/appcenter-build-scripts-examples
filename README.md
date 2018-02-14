@@ -2,6 +2,14 @@
 
 This repository contains a collection of build scripts examples for the [App Center](https://appcenter.ms) Build service. Build scripts are a powerful way to control the build process on App Center at three pre-defined stages. More details about the usage of build scripts on App Center can be found in the [documentation](https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/). Feel free to use and modify the scripts as you need them.
 
+# Table of Content
+
+### React Native
+- [Run Detox](react-native/detox.sh)
+
+### Xamarin
+- [Run NUnit based tests](xamarin/nunittest.sh)
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
