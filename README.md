@@ -4,6 +4,9 @@ This repository contains a collection of build scripts examples for the [App Cen
 
 # Table of Content
 
+### General
+- [Upload build output via SFTP](general/sftp-upload/)
+
 ### React Native
 - [Run Detox](react-native/detox/)
 
