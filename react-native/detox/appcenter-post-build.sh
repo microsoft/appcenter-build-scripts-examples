@@ -1,4 +1,4 @@
-# appcenter-post-clone.sh
+#!/usr/bin/env bash
 #
 # Run Detox.
 #
