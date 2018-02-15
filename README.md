@@ -7,6 +7,9 @@ This repository contains a collection of build scripts examples for the [App Cen
 ### General
 - [Upload build output via SFTP](general/sftp-upload/)
 
+### iOS
+- [Use App Center pre-release SDK](ios/appcenter-beta-sdk/)
+
 ### React Native
 - [Run Detox](react-native/detox/)
 
