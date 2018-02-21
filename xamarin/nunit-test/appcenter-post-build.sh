@@ -25,7 +25,7 @@ grep -q 'success="False"' $pathOfTestResults
 
 if [[ $? -eq 0 ]]
 then 
-echo "a test Failed" 
+echo "A test Failed" 
 exit 1
 else 
 echo "All tests passed" 
