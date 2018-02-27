@@ -15,6 +15,10 @@ This repository contains a collection of build scripts examples for the [App Cen
 
 ### Xamarin
 - [Run NUnit based tests](xamarin/nunit-test/)
+- [Change package name](xamarin/package-name)
+- [Change version name](xamarin/version-name)
+- [Change app constants](xamarin/app-constants)
+- [Change resource dictionary](xamarin/resource-dictionary)
 
 # Contributing
 
