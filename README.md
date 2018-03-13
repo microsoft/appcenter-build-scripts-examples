@@ -7,6 +7,7 @@ This repository contains a collection of build scripts examples for the [App Cen
 ### General
 - [Upload build output via SFTP](general/sftp-upload/)
 - [Slack build status notification](general/slack/)
+- [Bash - Email](general/bash-email/)
 
 ### iOS
 - [Use App Center pre-release SDK](ios/appcenter-beta-sdk/)
