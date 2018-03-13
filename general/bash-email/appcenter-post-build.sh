@@ -10,10 +10,12 @@
 # Modify the ORG, APP, TO_ADDRESS, SUBJECT, SUCCESS_BODY, FAILURE_BODY as required. 
 #
 # Add it as a Post-Build Script (appcenter-post-build.sh)
+# Configure your AppCenter build(s) to ensure the Build Script is picked.
 #
 # Uses UNIX LF EOL format. 
 #
 # Contributed by Manigandan Balachandran
+#
 
 # Update your ORG name and APP name
 ORG=AndroidOrg

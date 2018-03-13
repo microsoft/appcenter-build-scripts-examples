@@ -12,4 +12,4 @@
 
 * Modify the ORG, APP, TO_ADDRESS, SUBJECT, SUCCESS_BODY, FAILURE_BODY as required. 
 * Add it as a [post-build script](https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/#post-build) to your repository.
-* Configure your AppCenter build(s) to ensure the Build Script is picked.
+* 
