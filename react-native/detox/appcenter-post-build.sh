@@ -11,6 +11,8 @@
 #    from source instead.
 #
 # 3) Your Node version and Detox build command might be slightly different.
+#
+# 4) If you're using yarn, make sure to use it instead of npm, to avoid clashes in dependencies 
 
 
 echo "Installing applesimutils..."
@@ -18,7 +20,7 @@ mkdir simutils
 cd simutils
 curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUtils-0.5.22.tar.gz -o applesimutils.tar.gz
 tar xzvf applesimutils.tar.gz
-sh buildForBrew.sh 
+sh buildForBrew.sh .
 cd ..
 export PATH=$PATH:./simutils/build/Build/Products/Release
 
