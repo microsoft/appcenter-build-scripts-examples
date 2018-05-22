@@ -4,6 +4,15 @@
 
 set -e
 
+NDK_BUNDLE_TOOLCHAINS=$ANDROID_HOME/ndk-bundle/toolchains
+MIPS64_TOOLCHAIN=$NDK_BUNDLE_TOOLCHAINS/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/bin
+MIPS_TOOLCHAIN=$NDK_BUNDLE_TOOLCHAINS/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin
+
+if [ -d $MIPS64_TOOLCHAIN ] && [ -d $MIPS_TOOLCHAIN ]; then
+  echo "MIPS64 and MIPS toolchain already installed for NDK bundle - not reinstalling…"
+  exit 0
+fi
+
 export SUPPLEMENT_URL='https://appcenterbuildassets.azureedge.net/buildscripts/ndk-toolchains-supplement-r16b-r17.zip'
 
 pushd $ANDROID_HOME/ndk-bundle
