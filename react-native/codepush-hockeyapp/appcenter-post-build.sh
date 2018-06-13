@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-# Example: Install App Center CLI
-npm install -g appcenter-cli
+# Publish the changes using CodePush and deploy to HockeyApp
 
 ENVIRONMENT=Development
 APP_NAME=OrganizationName/MyApp-iOS
-APP_PATH=myApp.ipa
+APP_PATH=myAppDebug.ipa
 # HockeyApp-iOS-Dev
 HOCKEY_APP_ID=""
 HOCKEY_TOKEN=""
@@ -15,6 +14,7 @@ COMMIT_MESSAGE=$(git log -1 HEAD --pretty=format:%s)
 if [ "$APPCENTER_BRANCH" == "master" ]; then
     ENVIRONMENT=Production
     # HockeyApp-iOS-Prod
+    APP_PATH=myApp.ipa
     HOCKEY_APP_ID=""
 fi
 
@@ -26,16 +26,23 @@ if [[ -z "$APPCENTER_XCODE_PROJECT" ]]; then
 
     if [ "$APPCENTER_BRANCH" == "master" ]; then
         # HockeyApp-Android-Prod
+        APP_PATH=app-release.apk
         HOCKEY_APP_ID=""
     fi
 fi
 
 echo "**************** PUBLISH CHANGES WITH CODEPUSH ******************"
-echo "APP NAME               => $APP_NAME"
-echo "CURRENT ENVIRONMENT    => $ENVIRONMENT"
-echo "SELECTED RN PACKAGE    => $APPCENTER_REACTNATIVE_PACKAGE"
-echo "SELECTED XCODE PROJECT => $APPCENTER_XCODE_PROJECT"
-echo "OUTPUT DIRECTORY       => $APPCENTER_OUTPUT_DIRECTORY"
+echo "APP NAME                => $APP_NAME"
+echo "CURRENT ENVIRONMENT     => $ENVIRONMENT"
+echo "SELECTED RN PACKAGE     => $APPCENTER_REACTNATIVE_PACKAGE"
+echo "OUTPUT DIRECTORY        => $APPCENTER_OUTPUT_DIRECTORY"
+if [[ -z "$APPCENTER_XCODE_PROJECT" ]]; then
+    echo "SELECTED ANDROID MODULE  => $APPCENTER_ANDROID_MODULE"
+    echo "SELECTED ANDROID VARIANT => $APPCENTER_ANDROID_VARIANT"
+else
+    echo "SELECTED XCODE PROJECT   => $APPCENTER_XCODE_PROJECT"
+    echo "SELECTED XCODE SCHEME => $APPCENTER_XCODE_SCHEME"
+fi
 
 appcenter codepush release-react -a "$APP_NAME" -m --description "$COMMIT_MESSAGE" -d "$ENVIRONMENT" --token "$APP_CENTER_TOKEN"
 
