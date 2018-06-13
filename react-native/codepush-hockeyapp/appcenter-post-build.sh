@@ -5,16 +5,19 @@
 ENVIRONMENT=Development
 APP_NAME=OrganizationName/MyApp-iOS
 APP_PATH=myAppDebug.ipa
+APP_CENTER_TOKEN=""
+
 # HockeyApp-iOS-Dev
 HOCKEY_APP_ID=""
 HOCKEY_TOKEN=""
-APP_CENTER_TOKEN=""
+
+# Get the message of the last commit using Git
 COMMIT_MESSAGE=$(git log -1 HEAD --pretty=format:%s)
 
 if [ "$APPCENTER_BRANCH" == "master" ]; then
     ENVIRONMENT=Production
-    # HockeyApp-iOS-Prod
     APP_PATH=myApp.ipa
+    # HockeyApp-iOS-Prod
     HOCKEY_APP_ID=""
 fi
 
@@ -25,8 +28,8 @@ if [[ -z "$APPCENTER_XCODE_PROJECT" ]]; then
     HOCKEY_APP_ID=""
 
     if [ "$APPCENTER_BRANCH" == "master" ]; then
-        # HockeyApp-Android-Prod
         APP_PATH=app-release.apk
+        # HockeyApp-Android-Prod
         HOCKEY_APP_ID=""
     fi
 fi
