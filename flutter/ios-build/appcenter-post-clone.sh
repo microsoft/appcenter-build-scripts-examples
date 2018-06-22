@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Place this script in project/ios/
 
-# fail if any commands fails
+# fail if any command fails
 set -e
 # debug log
 set -x
