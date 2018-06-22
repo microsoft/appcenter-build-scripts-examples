@@ -23,6 +23,10 @@ This repository contains a collection of build scripts examples for the [App Cen
 - [Change app constants](xamarin/app-constants)
 - [Change resource dictionary](xamarin/resource-dictionary)
 
+### Flutter
+- [iOS Build](flutter/ios-build)
+- [Android Build](flutter/android-build)
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
