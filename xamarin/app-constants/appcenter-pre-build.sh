@@ -7,7 +7,7 @@
 # {
 #     public class AppConstant
 #     {
-#         public const string ApiUrl = "https://production.com/api";
+#         public const string ApiUrl = "https://CMS_MyApp-Eur01.com/api";
 #     }
 # }
 # 
@@ -30,7 +30,7 @@ APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/Core/AppConstant.cs
 if [ -e "$APP_CONSTANT_FILE" ]
 then
     echo "Updating ApiUrl to $API_URL in AppConstant.cs"
-    sed -i '' 's#ApiUrl = "[a-z:./]*"#ApiUrl = "'$API_URL'"#' $APP_CONSTANT_FILE
+    sed -i '' 's#ApiUrl = "[-A-Za-z0-9:_./]*"#ApiUrl = "'$API_URL'"#' $APP_CONSTANT_FILE
 
     echo "File content:"
     cat $APP_CONSTANT_FILE
