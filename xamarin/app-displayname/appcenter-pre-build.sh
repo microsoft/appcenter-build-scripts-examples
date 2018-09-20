@@ -28,7 +28,7 @@ echo "##[warning][Pre-Build Action] - Lets do some Pre build transformations..."
 SCRIPT_ERROR=0
 
 # Define the files to manipulate
-INFO_PLIST_FILE=$APPCENTER_SOURCE_DIRECTORY/My_XF_App.iOS/Info.plist
+INFO_PLIST_FILE=${APPCENTER_SOURCE_DIRECTORY}/My_XF_App.iOS/Info.plist
 ANDROID_MAINACTIVITY_FILE=${APPCENTER_SOURCE_DIRECTORY}/My_XF_App.Droid/MainActivity.cs
 
 echo "##[warning][Pre-Build Action] - Checking if all files and environment variables are available..."
