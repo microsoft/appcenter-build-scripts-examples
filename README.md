@@ -9,6 +9,7 @@ This repository contains a collection of build scripts examples for the [App Cen
 - [Slack build status notification](general/slack/)
 - [Notify build status via bash email](general/bash-email/)
 - [Report build status next to github commit](general/github-commit-status/)
+- [Change google-services.json](general/android/google-services/)
 
 ### iOS
 - [Use App Center pre-release SDK](ios/appcenter-beta-sdk/)
