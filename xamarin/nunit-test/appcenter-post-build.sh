@@ -21,7 +21,7 @@ cat $pathOfTestResults
 echo
 
 #look for a failing test
-grep -q 'success="False"' $pathOfTestResults
+grep -q 'result="Failed"' $pathOfTestResults
 
 if [[ $? -eq 0 ]]
 then 
