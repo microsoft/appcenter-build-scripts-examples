@@ -16,6 +16,7 @@ This repository contains a collection of build scripts examples for the [App Cen
 
 ### React Native
 - [Run Detox](react-native/detox/)
+- [Change version name](react-native/version-name)
 
 ### Xamarin
 - [Run NUnit based tests](xamarin/nunit-test/)
