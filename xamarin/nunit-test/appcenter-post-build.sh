@@ -13,7 +13,7 @@ echo "Compiled projects to run NUnit tests:"
 find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*Test.*\.dll' -exec echo {} \;
 echo
 echo "Running NUnit tests:"
-find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*Test.*\.dll' -exec nunit3-console {} \;
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*Test.*\.dll' -exec nunit3-console {} +
 echo
 echo "NUnit tests result:"
 pathOfTestResults=$(find $APPCENTER_SOURCE_DIRECTORY -name 'TestResult.xml')
@@ -21,7 +21,7 @@ cat $pathOfTestResults
 echo
 
 #look for a failing test
-grep -q 'success="False"' $pathOfTestResults
+grep -q 'result="Failed"' $pathOfTestResults
 
 if [[ $? -eq 0 ]]
 then 
