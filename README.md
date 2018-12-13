@@ -23,6 +23,7 @@ This repository contains a collection of build scripts examples for the [App Cen
 - [Change version name](xamarin/version-name)
 - [Change app constants](xamarin/app-constants)
 - [Change resource dictionary](xamarin/resource-dictionary)
+- [Change app display name] (xamarin/app-displayname)
 
 ### Flutter
 - [iOS Build](flutter/ios-build)
