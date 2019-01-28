@@ -15,7 +15,7 @@ INFO_PLIST_FILE=$APPCENTER_SOURCE_DIRECTORY/iOS/Info.plist
 if [ -e "$ANDROID_MANIFEST_FILE" ]
 then
     echo "Updating package name to $PACKAGE_NAME in AndroidManifest.xml"
-    sed -i '' 's/package="[a-z.]*"/package="'$PACKAGE_NAME'"/' $ANDROID_MANIFEST_FILE
+    sed -i '' 's/package="[^"]*"/package="'$PACKAGE_NAME'"/' $ANDROID_MANIFEST_FILE
 
     echo "File content:"
     cat $ANDROID_MANIFEST_FILE
