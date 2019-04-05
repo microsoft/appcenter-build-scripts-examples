@@ -14,6 +14,7 @@ This repository contains a collection of build scripts examples for the [App Cen
 
 ### iOS
 - [Use App Center pre-release SDK](ios/appcenter-beta-sdk/)
+- [Use the same CocoaPods version as the Pod lockfile](ios/match-cocoapods-version-to-lockfile/appcenter-post-clone.sh)
 
 ### React Native
 - [Run Detox](react-native/detox/)
